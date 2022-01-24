@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: movie-frontend-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
-    app: movie-frontend-service
+    app: movie-frontend
   ports:
       # 기본적으로 그리고 편의상 `targetPort` 는 `port` 필드와 동일한 값으로 설정된다.
     - port: 5000
