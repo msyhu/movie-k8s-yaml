@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-backend
+  labels:
+    app: movie-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-backend
+  template:
+    metadata:
+      labels:
+        app: movie-backend
+    spec:
+      containers:
+      - name: movie-backend
+        image: msyhu/movie:0.0.1
+        ports:
+        - containerPort: 8080
