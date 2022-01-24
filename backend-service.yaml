@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: movie-backend-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: movie-backend
   ports:
